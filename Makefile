@@ -35,7 +35,7 @@ OBJS = FFT.o kernel.o Stopwatch.o Random.o SOR.o SparseCompRow.o \
 all: scimark2
 
 run: scimark2.epp
-	LD_LIBRARY_PATH=$(LLVM_DIR)/lib ./scimark2.epp
+	LD_LIBRARY_PATH=$(LLVM_DIR)/lib ./scimark2.epp -tiny
 	PATH=$(LLVM_BINDIR):$(LLVM_EPP_BINDIR):$$PATH llvm-epp -p=$(PROFILE_NAME) scimark2.bc
 
 scimark2 : scimark2.o $(OBJS)
