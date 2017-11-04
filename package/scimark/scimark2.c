@@ -47,8 +47,16 @@ int main(int argc, char *argv[])
 				LU_size = LG_LU_SIZE;
 
 				current_arg++;
-			}
+			} else if (strcmp(argv[1], "-tiny")==0) {
+				FFT_size = TINY_FFT_SIZE;
+				SOR_size = TINY_SOR_SIZE;
+				Sparse_size_M = TINY_SPARSE_SIZE_M;
+				Sparse_size_nz = TINY_SPARSE_SIZE_nz;
+				LU_size = TINY_LU_SIZE;
 
+				current_arg++;
+			}
+			
 			if (current_arg < argc)
 			{
 				min_time = atof(argv[current_arg]);
