@@ -1,4 +1,27 @@
-		SciMark2 (C version)
+			     scimark2-epp
+
+This is a C version of SciMark 2.0 (http://math.nist.gov/scimark2/)
+with a modified Makefile that can be used to run it with LLVM 5.0 path
+profiler llvm-epp.
+
+To build SciMark2:
+
+make
+
+To run with llvm-epp:
+
+First, set the appropriate variables at the top of the Makefile, and
+then:
+
+make run
+
+As with the original software, this software is in the public domain.
+
+Below is the original README of the SciMark 2.0 C version.
+
+----------------------------------------------------------------------
+
+		 SciMark2 (C version)
 
 This is an ANSI C version of the SciMark2 benchmark,
 translated from the original Java sources.  The intent
